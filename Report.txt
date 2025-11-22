@@ -1,0 +1,174 @@
+1. Introduction
+
+The Library Management System is a web-based application designed to simplify the process of managing books in a library. It allows users to add, view, update, and delete book records through an intuitive interface. This project is developed using Flask for backend logic, SQLAlchemy for database management, and HTML/CSS for the frontend.
+
+The purpose of this project is to demonstrate how modern web frameworks can be used to build efficient CRUD applications suitable for academic and small-scale environments.
+
+2. Objectives
+
+The main objectives of the system are:
+
+To create a simple and user-friendly interface for managing library books.
+
+To implement CRUD operations (Create, Read, Update, Delete).
+
+To store book data efficiently in an SQLite database using SQLAlchemy.
+
+To understand and implement the MVC (Model-View-Controller) structure in Flask.
+
+To gain hands-on experience with backend and frontend integration.
+
+3. Technologies Used
+Backend Technologies
+
+Python 3
+
+Flask Framework
+
+SQLAlchemy ORM
+
+Jinja2 Template Engine
+
+Frontend Technologies
+
+HTML5
+
+CSS3
+
+Bootstrap (optional, if added)
+
+Database
+
+SQLite (automatically generated as library.db)
+
+Tools Used
+
+VS Code (Code Editor)
+
+GitHub (Version Control)
+
+Pip (Package Installation)
+
+4. System Architecture
+
+The project follows a structured layout:
+
+library-management/
+│── app.py
+│── models.py
+│── static/
+│   └── style.css
+│── templates/
+│   ├── base.html
+│   ├── book_list.html
+│   ├── add_book.html
+│   └── edit_book.html
+│── requirements.txt
+│── README.md
+
+4.1 Model
+
+The model (models.py) defines the Book class with fields:
+
+id
+
+title
+
+author
+
+year
+
+isbn
+
+4.2 View
+
+HTML templates create the frontend interface:
+
+Add Book Page
+
+Edit Book Page
+
+List Books Page
+
+4.3 Controller
+
+app.py manages routes and connections between frontend and database.
+
+5. Features of the System
+1. Add New Books
+
+Users can enter book details including title, author, year, and ISBN. Required fields are validated.
+
+2. View All Books
+
+The homepage lists all books stored in the database using a clean table layout.
+
+3. Edit Book Details
+
+Users can update existing book information through a dedicated edit form.
+
+4. Delete Books
+
+Books can be removed from the database securely with confirmation prompts.
+
+5. Automatic Database Creation
+
+On first run, Flask-SQLAlchemy automatically creates library.db.
+
+6. Working of the System
+
+User opens the application through 127.0.0.1:5000.
+
+Flask loads the default route, redirecting to the books list page.
+
+SQLAlchemy interacts with the SQLite database to fetch or modify data.
+
+User selects actions such as Add, Edit, or Delete.
+
+Flask processes forms, updates the database, and refreshes the views.
+
+7. Advantages of the Project
+
+Simple, fast, and lightweight.
+
+Easy to understand and extend for beginners.
+
+Demonstrates real-world use of Flask routing and database models.
+
+Responsive design for larger screens.
+
+Suitable as a mini-project or college assignment.
+
+8. Limitations
+
+No authentication or user login system.
+
+No search or filter functionality.
+
+Basic UI (can be enhanced further).
+
+Only supports a single user at a time.
+
+9. Future Enhancements
+
+The system can be extended with additional features:
+
+User Login System using Flask-Login
+
+Search Bar to filter books
+
+Pagination for large libraries
+
+Export Books to CSV/Excel
+
+Upload Book Cover Images
+
+Dark Theme UI
+
+Switch to MySQL/PostgreSQL for bigger databases
+
+10. Conclusion
+
+This project successfully demonstrates the development of a full-stack application using Flask, SQLAlchemy, HTML, and CSS. It covers essential concepts such as routing, form handling, database modeling, and template rendering.
+
+The Library Management System serves as a strong foundation for more advanced systems and showcases the practical application of Python web development for real-world use cases.

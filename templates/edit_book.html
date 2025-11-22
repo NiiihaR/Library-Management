@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Edit Book{% endblock %}
+{% block content %}
+<h2>Edit Book</h2>
+<form method="post">
+<label>Title (required)<br>
+<input name="title" value="{{ book.title }}" required>
+</label><br>
+
+
+<label>Author<br>
+<input name="author" value="{{ book.author or '' }}">
+</label><br>
+
+
+<label>Year<br>
+<input name="year" type="number" min="0" value="{{ book.year or '' }}">
+</label><br>
+
+
+<label>ISBN<br>
+<input name="isbn" value="{{ book.isbn or '' }}">
+</label><br>
+
+
+<button type="submit">Save</button>
+<a href="/books">Cancel</a>
+</form>
+{% endblock %}

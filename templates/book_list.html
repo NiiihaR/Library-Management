@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Books{% endblock %}
+{% block content %}
+<h2>All Books</h2>
+{% if books %}
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Year</th>
+<th>ISBN</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for book in books %}
+<tr>
+<td>{{ book.id }}</td>
+<td>{{ book.title }}</td>
+<td>{{ book.author or '-' }}</td>
+<td>{{ book.year or '-' }}</td>
+<td>{{ book.isbn or '-' }}</td>
+<td>
+<a href="/books/edit/{{ book.id }}">Edit</a>
+<form action="/books/delete/{{ book.id }}" method="post" style="display:inline;" onsubmit="return confirm('Delete this book?');">
+<button type="submit">Delete</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+<p>No books yet. <a href="/books/add">Add one</a>.</p>
+{% endif %}
+{% endblock %}
