@@ -13,7 +13,7 @@ Features
 - Simple, beginner-friendly structure
 
 ------------------------------------------------------------
-🛠 Tech Stack
+Tech Stack
 ------------------------------------------------------------
 - Python 3
 - Flask
